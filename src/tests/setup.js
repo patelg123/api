@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// Load models since we will not be instantiating our express server.
+// load models since we will not be instantiating our express server.
 require('../server/models/Fiddle.ts');
 
 beforeEach(function(done) {
