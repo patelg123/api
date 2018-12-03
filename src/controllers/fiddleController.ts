@@ -7,7 +7,28 @@ const Fiddle = mongoose.model("Fiddle", FiddleSchema);
 export class FiddleController {
 
   public createFiddle = (req: Request, res: Response) => {
-    res.json({ function: [ {name: "createFiddle"} ] });
+
+/*
+    const fiddle = {
+                        "creator": "123",
+                        "description": "test",
+                        "fiddle": "test",
+                        "name": "test",
+                        "private": "1",
+                        "stars": { "id" : "123", date: "2018-11-11" },
+                        "value": "test"
+
+                  };
+*/
+    const newFiddle = new Fiddle(req.body);
+
+    newFiddle.save((err: any, fiddle: any) => {
+              if (err) {
+                  res.send(err);
+              }
+              res.json(fiddle);
+    });
+
 }
 
   public updateFiddle = (req: Request, res: Response) => {

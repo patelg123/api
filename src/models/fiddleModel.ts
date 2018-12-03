@@ -3,10 +3,6 @@ import * as mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 export const FiddleSchema = new Schema({
-      _id:  {
-        required: true,
-        type: String,
-      },
       creator: {
         required: false,
         type: String,
@@ -28,11 +24,11 @@ export const FiddleSchema = new Schema({
         type: Number,
       },
       stars: [{
-        _id: String,
+        id: String,
         date: Date,
       }],
       value: {
         required: true,
         type: String,
-      },
+      }
 });
