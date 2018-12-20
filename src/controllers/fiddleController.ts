@@ -17,7 +17,6 @@ export class FiddleController {
                         "private": "1",
                         "stars": { "id" : "123", date: "2018-11-11" },
                         "value": "test"
-
                   };
 */
     const newFiddle = new Fiddle(req.body);
